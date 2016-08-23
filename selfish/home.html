@@ -1,0 +1,133 @@
+<!--
+  TODO: Add some META elements
+  TODO: Add sidebar
+  TODO: Add footer
+-->
+
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="X-UA-Compatible" content="IE=edge, chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>
+      <%BlogTitle%>
+    </title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/semantic-ui/2.2.3/semantic.min.css"/>
+    <link rel="stylesheet" type="text/css" href="<%CSSUrl%>"/>
+  </head>
+  <body>
+    <header class="home">
+      <div class="header__content">
+        <div style="padding: 4px"></div>
+        <div class="ui container">
+          <div class="ui large inverted secondary stackable menu">
+            <div class="right menu">
+              <a href="<%BlogUrl%>" class="active item">Beranda</a>
+              <a href="#!" class="item">Album</a>
+              <a href="#!" class="item">Peta Situs</a>
+            </div>
+          </div>
+        </div>
+        <div class="ui hidden divider"></div>
+        <div align="center">
+          <h1 class="ui inverted header">
+            <img src="<%ProfileImage%>" class="ui circular image"/>
+            <div align="left" class="content">
+              <%BlogTitle%>
+              <div class="sub header">
+                <%BlogDescription%>
+              </div>
+            </div>
+          </h1>
+        </div>
+        <div class="ui hidden divider"></div>
+        <div align="center">
+          <div class="social">
+            <a href="#!" title="Google Plus" target="_blank" class="ui red icon button">
+              <i class="google plus icon"></i>
+            </a>
+            <a href="#!" title="Facebook" target="_blank" class="ui blue icon button">
+              <i class="facebook icon"></i>
+            </a>
+            <a href="#!" title="Github" target="_blank" class="ui black icon button">
+              <i class="github icon"></i>
+            </a>
+            <a href="#!" title="Twitter" target="_blank" class="ui blue icon button">
+              <i class="twitter icon"></i>
+            </a>
+            <a href="#!" title="Youtube" target="_blank" class="ui red icon button">
+              <i class="youtube icon"></i>
+            </a>
+          </div>
+        </div>
+        <div class="ui hidden divider"></div>
+        <div class="ui hidden divider"></div>
+      </div>
+    </header>
+    <main>
+      <div class="ui hidden divider"></div>
+      <div class="ui container">
+        <div class="ui two column grid">
+          <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column">
+            <div class="ui one cards">
+              <IndexEntrysLoop>
+                <%TrackBackAutoDiscovery%>
+                <div class="card">
+                  <div class="image">
+                    <img src="<%EntryImageOriginal%>"/>
+                  </div>
+                  <div class="content">
+                    <a href="<%EntryPermalink%>" class="header">
+                      <%EntryTitle%>
+                    </a>
+                    <div class="meta">
+                      <span class="date">
+                        <%EntryDateDay2%> <%EntryDateMonth%> <%EntryDateYear4%>
+                      </span>
+                      <IfEntryCategory>
+                        <a href="<%EntryCategoryUrl%>" class="ui right floated label"><%EntryCategory%></a>
+                      </IfEntryCategory>
+                    </div>
+                    <div class="description">
+                      <%EntryBodyNoTag%>
+                    </div>
+                  </div>
+                  <div class="extra content">
+                    <div class="left floated sharer">
+                      <a href="https://plus.google.com/share?url=<%BlogUrl%>e<%EntryId%>.html" title="Google Plus" target="_blank" class="ui red icon button">
+                        <i class="google plus icon"></i>
+                      </a>
+                      <a href="https://www.facebook.com/sharer/sharer.php?u=<%BlogUrl%>e<%EntryId%>.html&t=<%EntryTitle%>" title="Facebook" target="_blank" class="ui blue icon button">
+                        <i class="facebook icon"></i>
+                      </a>
+                      <a href="http://pinterest.com/pin/create/button/?url=<%BlogUrl%>e<%EntryId%>.html&description=<%EntryTitle%>" title="Pinterest" target="_blank" class="ui red icon button">
+                        <i class="pinterest icon"></i>
+                      </a>
+                      <a href="https://twitter.com/intent/tweet?text=<%EntryTitle%>&url=<%BlogUrl%>e<%EntryId%>.html" title="Twiter" target="_blank" class="ui blue icon button">
+                        <i class="twitter icon"></i>
+                      </a>
+                    </div>
+                    <div class="right floated author">
+                      <img src="img/wisn.png" class="ui avatar image"/> <%EntryAuthor%>
+                    </div>
+                  </div>
+                </div>
+              </IndexEntrysLoop>
+            </div>
+          </div>
+          <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
+            <div class="ui segments">
+              <div class="ui secondary segment">Nama Sidebar</div>
+              <div class="ui segment">Isi dari sidebar</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      
+    </footer>
+    <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.3/semantic.min.js"></script>
+  </body>
+</html>
